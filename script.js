@@ -21,15 +21,15 @@ const music = document.getElementById("music")
 
 const text = `
 Дорога мамо 🤗!
-Вітаємо тебе з 8 Березня.
+Вітаємо тебе з 8 Березня
 
-Дякуємо тобі за любов,
-турботу і підтримку.
+Дякуємо тобі за любов
+турботу і підтримку
 
 Пробач що іноді нервуємо тебе 🙏
 
-Бажаємо здоров’я,
-радості і багато щасливих моментів в житті .
+Бажаємо здоров’я
+радості і багато щасливих моментів в житті 
 
 З любов'ю
 Рома, Давид і Йосип ❤️
@@ -79,11 +79,9 @@ envelope.addEventListener("click",()=>{
 
         letter.classList.add("show")
 
-        /* scroll to letter */
-
         window.scrollTo({
-            top:document.body.scrollHeight,
-            behavior:"smooth"
+            top: letter.offsetTop,
+            behavior: "smooth"
         })
 
         typeWriter()
@@ -95,27 +93,7 @@ envelope.addEventListener("click",()=>{
 
 /* FALLING FLOWERS */
 
-function createFlower(){
 
-    const flower=document.createElement("div")
-
-    flower.classList.add("flower")
-
-    flower.innerHTML="🌸"
-
-    flower.style.left=Math.random()*100+"vw"
-
-    flower.style.animationDuration=5+Math.random()*4+"s"
-
-    document.body.appendChild(flower)
-
-    setTimeout(()=>{
-        flower.remove()
-    },9000)
-
-}
-
-setInterval(createFlower,500)
 
 
 /* CONFETTI */
